@@ -1,7 +1,7 @@
-# rhythmbox-discord-rp
+# cmus-discord-rp
 
-## Discord Rich Presence for RhythmBox
+## Discord Rich Presence for cmus
 
-This will eventually become a Rhythmbox plugin.
+Derived from [rhythmbox-discord-rp](https://github.com/macdesu/rhythmbox-discord-rp).
 
 ![Sample](/imgs/sample.png)
