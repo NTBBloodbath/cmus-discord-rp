@@ -8,6 +8,6 @@ cmus is a console music player for Unix-like systems
 
 ### What is Rich Presence ?
 
-This project was derived from [rhythmbox-discord-rp](https://github.com/macdesu/rhythmbox-discord-rp).
-
 ![Sample](/imgs/sample.png)
+
+This project was derived from [rhythmbox-discord-rp](https://github.com/macdesu/rhythmbox-discord-rp).
