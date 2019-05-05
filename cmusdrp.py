@@ -12,8 +12,11 @@ def discord():
 		time.sleep(1)
 		artist = os.popen("cmus-remote -Q | grep \"tag artist\" | sed s/\"tag artist \"//").read()
 		title = os.popen("cmus-remote -Q | grep \"tag title\" | sed s/\"tag title \"//").read()
+		duration = os.popen("cmus-remote -Q | grep \"duration\" | sed s/\"duration \"//").read()
+		position = os.popen("cmus-remote -Q | grep \"position\" | sed s/\"position \"//").read()
+		current_time = " (" + position + "/" + duration + ")"
 
-		RPC.update(details=artist, state=title, large_image="logo")
+		RPC.update(details=artist, state=title + current_time, large_image="logo")
 
 if __name__ == "__main__":
 	discord()
