@@ -16,7 +16,7 @@ def discord():
 		else:
 			artist = os.popen("cmus-remote -Q | grep \"tag artist\" | sed s/\"tag artist \"//").read()
 			title = os.popen("cmus-remote -Q | grep \"tag title\" | sed s/\"tag title \"//").read()
-			
+
 			if os.popen("cmus-remote -Q | grep \"status \"").read() == "status paused\n":
 				current_time = "(paused)"
 			else:
