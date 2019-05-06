@@ -13,18 +13,21 @@ def discord():
 			artist = "  "
 			title = "  "
 			current_time = "IDLE"
+			small_image = None
 		else:
 			artist = os.popen("cmus-remote -Q | grep \"tag artist\" | sed s/\"tag artist \"//").read()
 			title = os.popen("cmus-remote -Q | grep \"tag title\" | sed s/\"tag title \"//").read()
 
 			if os.popen("cmus-remote -Q | grep \"status \"").read() == "status paused\n":
 				current_time = "(paused)"
+				small_image = "pause"
 			else:
 				position = int(os.popen("cmus-remote -Q | grep \"position\" | sed s/\"position \"//").read())
 				duration = int(os.popen("cmus-remote -Q | grep \"duration\" | sed s/\"duration \"//").read())
 				current_time = " (" + str(position) + "/" + str(duration) + ")"
+				small_image = "play"
 
-		RPC.update(details=artist, state=title + current_time, large_image="logo")
+		RPC.update(details=artist, state=title + current_time, large_image="logo", small_image=small_image)
 
 if __name__ == "__main__":
 	discord()
